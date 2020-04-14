@@ -20,4 +20,6 @@ RUN yum install -y \
     libffi-devel openssl-devel \
     python-pip gfal2-all gfal2-util \
     CERN-CA-certs voms-clients-java \
-    ca-policy-egi-core wlcg-voms-cms
+    ca-policy-egi-core wlcg-voms-cms \
+    wlcg-voms-atlas wlcg-voms-alice \
+    wlcg-voms-lhcb
