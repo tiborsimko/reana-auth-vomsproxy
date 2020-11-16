@@ -12,14 +12,16 @@ LABEL org.opencontainers.image.vendor='reanahub'
 LABEL org.opencontainers.image.title='Image to obtain a VOMS proxy'
 LABEL org.opencontainers.image.description='Requires valid grid certificate to be mounted'
 
-ADD ca.repo /etc/yum.repos.d/ca.repo
-ADD wlcg-centos7.repo /etc/yum.repos.d/wlcg-centos7.repo
-ADD RPM-GPG-KEY-wlcg /etc/pki/rpm-gpg/RPM-GPG-KEY-wlcg
+COPY ca.repo /etc/yum.repos.d/ca.repo
+COPY wlcg-centos7.repo /etc/yum.repos.d/wlcg-centos7.repo
+COPY RPM-GPG-KEY-wlcg /etc/pki/rpm-gpg/RPM-GPG-KEY-wlcg
 
+# hadolint ignore=DL3033
 RUN yum install -y \
     libffi-devel openssl-devel \
     python-pip gfal2-all gfal2-util \
     CERN-CA-certs voms-clients-java \
     ca-policy-egi-core wlcg-voms-cms \
     wlcg-voms-atlas wlcg-voms-alice \
-    wlcg-voms-lhcb
+    wlcg-voms-lhcb && \
+    yum clean all

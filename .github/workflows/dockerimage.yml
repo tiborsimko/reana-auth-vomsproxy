@@ -6,12 +6,23 @@ on:
     - 'Dockerfile'
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  lint-dockerfile:
+    runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Check Dockerfile compliance
+        run: docker run -i --rm hadolint/hadolint < Dockerfile
+
+  docker-build:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
         with:
           fetch-depth: '0'
+        
       - uses: docker/build-push-action@v1
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
