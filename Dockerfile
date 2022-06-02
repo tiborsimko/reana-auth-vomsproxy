@@ -1,4 +1,4 @@
-FROM cern/cc7-base:20191107
+FROM cern/cc7-base:20220601-1
 
 ARG DATE
 ARG VERSION
