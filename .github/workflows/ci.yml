@@ -1,0 +1,31 @@
+# This file is part of REANA.
+# Copyright (C) 2020, 2022 CERN.
+#
+# REANA is free software; you can redistribute it and/or modify it
+# under the terms of the MIT License; see LICENSE file for more details.
+
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  lint-dockerfile:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Check Dockerfile compliance
+        run: docker run -i --rm hadolint/hadolint:v1.18.2 < Dockerfile
+
+  build-docker:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Build image
+        run: docker build -t reanahub/reana-auth-vomsproxy .
+
+      - name: Test image
+        run: docker run -i --rm reanahub/reana-auth-vomsproxy voms-proxy-info 2>&1 | grep "Proxy not found"
