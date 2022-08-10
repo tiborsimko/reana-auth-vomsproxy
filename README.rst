@@ -16,7 +16,7 @@ About
 
 ``reana-auth-vomsproxy`` provides a container image for creating and renewing a VOMS proxy certificate. The container image
 includes no additional logic or libraries, just the bare minimum to support the VOMS client.
-The image is configured to support authentication for the four experiments at CERN: ALICE, ATLAS, CMS and LHCb.
+The image is configured to support authentication for the four experiments at CERN's Large Hadron Collider (ALICE, ATLAS, CMS, LHCb), as well as `ESCAPE <https://projectescape.eu/>`_ Virtual Organization.
 
 ``reana-auth-vomsproxy`` was developed for use in the `REANA <http://www.reana.io/>`_ reusable research data analysis platform.
 
@@ -81,3 +81,4 @@ The list of contributors in alphabetical order:
 
 - `Adelina Lintuluoto <https://orcid.org/0000-0002-0726-1452>`_ <adelina.eleonora.lintuluoto@cern.ch>
 - `Clemens Lange <https://orcid.org/0000-0002-3632-3157>`_ <clemens.lange@cern.ch>
+- `Elena Gazzarrini <https://orcid.org/0000-0001-5772-5166>`_ <elena.gazzarrini@cern.ch>

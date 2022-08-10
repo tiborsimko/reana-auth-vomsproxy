@@ -18,10 +18,15 @@ COPY RPM-GPG-KEY-wlcg /etc/pki/rpm-gpg/RPM-GPG-KEY-wlcg
 
 # hadolint ignore=DL3033
 RUN yum install -y \
-    libffi-devel openssl-devel \
+    wget libffi-devel openssl-devel \
     python-pip gfal2-all gfal2-util \
     CERN-CA-certs voms-clients-java \
     ca-policy-egi-core wlcg-voms-cms \
     wlcg-voms-atlas wlcg-voms-alice \
     wlcg-voms-lhcb && \
     yum clean all
+
+# Add support for ESCAPE VOMS
+RUN wget https://indigo-iam.github.io/escape-docs/voms-config/voms-escape.cloud.cnaf.infn.it.vomses -O /etc/vomses/voms-escape.cloud.cnaf.infn.it.vomses
+RUN mkdir -p /etc/grid-security/vomsdir/escape \
+    && wget https://indigo-iam.github.io/escape-docs/voms-config/voms-escape.cloud.cnaf.infn.it.lsc -O /etc/grid-security/vomsdir/escape/voms-escape.cloud.cnaf.infn.it.lsc
