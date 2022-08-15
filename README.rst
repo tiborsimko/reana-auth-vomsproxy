@@ -2,7 +2,7 @@
 REANA Authentication VOMSproxy
 ==============================
 
-.. image:: https://github.com/reanahub/reana-auth-vomsproxy/workflows/Docker%20Image%20CI/badge.svg
+.. image:: https://github.com/reanahub/reana-auth-vomsproxy/workflows/CI/badge.svg
    :target: https://github.com/reanahub/reana-auth-vomsproxy/actions
 
 .. image:: https://badges.gitter.im/Join%20Chat.svg
