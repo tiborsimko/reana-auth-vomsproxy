@@ -9,8 +9,8 @@ LABEL org.opencontainers.image.url='https://github.com/reanahub/reana-auth-vomsp
 LABEL org.opencontainers.image.documentation='https://github.com/reanahub/reana-auth-vomsproxy/blob/master/README.md'
 LABEL org.opencontainers.image.version="${VERSION}"
 LABEL org.opencontainers.image.vendor='reanahub'
-LABEL org.opencontainers.image.title='Image to obtain a VOMS proxy'
-LABEL org.opencontainers.image.description='Requires valid grid certificate to be mounted'
+LABEL org.opencontainers.image.title='Image to either set up VOMS proxy or optionally create it'
+LABEL org.opencontainers.image.description='Requires either VOMS proxy file or a valid Grid certificate to create it'
 
 COPY ca.repo /etc/yum.repos.d/ca.repo
 COPY wlcg-centos7.repo /etc/yum.repos.d/wlcg-centos7.repo
