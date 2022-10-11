@@ -72,7 +72,7 @@ user Grid credentials, this requires additional information and inputs:
 Changes
 =======
 
-Version 1.2.0 (UNRELEASED)
+Version 1.2.0 (2022-10-11)
 --------------------------
 
 - Changes documentation to better expose two usage modes, the client-side and
