@@ -1,4 +1,4 @@
-FROM cern/cc7-base:20220601-1
+FROM docker.io/cern/cc7-base:20220601-1
 
 ARG DATE
 ARG VERSION

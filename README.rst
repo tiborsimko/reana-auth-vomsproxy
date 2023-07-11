@@ -41,7 +41,7 @@ If you would like to try it out locally, you can run:
 
 .. code-block:: console
 
-   $ docker run -i -t --rm -v $HOME/foo:/root/.globus/ reanahub/reana-auth-vomsproxy:1.0.0 /bin/bash
+   $ docker run -i -t --rm -v $HOME/foo:/root/.globus/ docker.io/reanahub/reana-auth-vomsproxy:1.0.0 /bin/bash
 
 Your local directory ``/foo`` should contain your ``usercert.pem`` and
 ``userkey.pem`` files. By default the VOMS client checks the directory
