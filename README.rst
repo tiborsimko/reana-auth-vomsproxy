@@ -102,13 +102,3 @@ More information
 For more information about `REANA <https://www.reana.io/>`_ reusable research
 data analysis platform, please see `its documentation
 <https://docs.reana.io/>`_.
-
-Contributors
-============
-
-The list of contributors in alphabetical order:
-
-- `Adelina Lintuluoto <https://orcid.org/0000-0002-0726-1452>`_
-- `Clemens Lange <https://orcid.org/0000-0002-3632-3157>`_
-- `Elena Gazzarrini <https://orcid.org/0000-0001-5772-5166>`_
-- `Tibor Simko <https://orcid.org/0000-0001-7202-5803>`_
