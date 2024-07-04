@@ -40,7 +40,7 @@ Inside the container a VOMS proxy can be obtained by specifying the Virtual Orga
 for example via:
 
 ```console
-$ voms-proxy-init --voms cms
+[root@b4d354b65688 /]# voms-proxy-init --voms cms
 ```
 
 ## Configuration
@@ -57,6 +57,10 @@ credentials, this requires additional information and inputs:
 - Virtual organisation membership (e.g. `cms`)
 
 ## Changes
+
+### Version 1.2.1 (UNRELEASED)
+
+- Fixes WLCG VOMS support now that WLCG IAM instance is in production.
 
 ### Version 1.2.0 (2022-10-11)
 
