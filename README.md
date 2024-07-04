@@ -58,7 +58,7 @@ credentials, this requires additional information and inputs:
 
 ## Changes
 
-### Version 1.2.1 (UNRELEASED)
+### Version 1.2.1 (2022-07-04)
 
 - Fixes WLCG VOMS support now that WLCG IAM instance is in production.
 
