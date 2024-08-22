@@ -1,18 +1,21 @@
-FROM docker.io/cern/cc7-base:20240611-1
+FROM docker.io/cern/alma9-base:20240801-1
 
 ARG DATE
 ARG VERSION
 
 COPY ca.repo /etc/yum.repos.d/ca.repo
-COPY wlcg-centos7.repo /etc/yum.repos.d/wlcg-centos7.repo
+COPY wlcg-el9.repo /etc/yum.repos.d/wlcg-el9.repo
 COPY RPM-GPG-KEY-wlcg /etc/pki/rpm-gpg/RPM-GPG-KEY-wlcg
 
 # hadolint ignore=DL3033
+RUN yum install -y epel-release && \
+    yum clean all
+
+# hadolint ignore=DL3033
 RUN yum install -y \
-      CERN-CA-certs \
       ca-policy-egi-core \
       gfal2-all \
-      gfal2-util \
+      python3-gfal2-util \
       libffi-devel \
       openssl-devel \
       python-pip \
