@@ -1,4 +1,4 @@
-FROM docker.io/cern/alma9-base:20240801-1
+FROM docker.io/cern/alma9-base:20250301-1
 
 ARG DATE
 ARG VERSION
