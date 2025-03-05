@@ -29,7 +29,7 @@ true` workflow hints. For more information, please see
 If you would like to try it out locally, you can run:
 
 ```console
-$ docker run -i -t --rm -v $HOME/foo:/root/.globus/ docker.io/reanahub/reana-auth-vomsproxy:1.3.0 /bin/bash
+$ docker run -i -t --rm -v $HOME/foo:/root/.globus/ docker.io/reanahub/reana-auth-vomsproxy:1.3.1 /bin/bash
 ```
 
 Your local directory `/foo` should contain your `usercert.pem` and `userkey.pem` files.
@@ -57,6 +57,10 @@ credentials, this requires additional information and inputs:
 - Virtual organisation membership (e.g. `cms`)
 
 ## Changes
+
+### Version 1.3.1 (2025-03-05)
+
+- Updates VOMS packages to solve deprecated IAM server connections.
 
 ### Version 1.3.0 (2024-09-03)
 
@@ -87,9 +91,9 @@ the format "YYYY-MM-DD" and `VERSION` as either a semantic versioning and/or the
 
 ```console
 $ docker build \
-     --build-arg DATE=2024-09-03 \
-     --build-arg VERSION=1.3.0 \
-     -t docker.io/reanahub/reana-auth-vomsproxy:1.3.0 \
+     --build-arg DATE=2025-03-05 \
+     --build-arg VERSION=1.3.1 \
+     -t docker.io/reanahub/reana-auth-vomsproxy:1.3.1 \
      .
 ```
 
